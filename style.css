@@ -2,6 +2,10 @@ body {
   padding-top: 75px;
 }
 
+.row {
+    margin-left:0;
+    margin-right:0;
+}
 .navbar {
   background-color: #f7f262;
 }
@@ -15,6 +19,10 @@ body {
   background-size: cover;
 }
 
+.pergunta p {
+    margin-top: 10px;
+}
+
 @media (max-width: 767px) {
   #home-quote .display-4 {
     font-size: 2rem;
@@ -26,15 +34,22 @@ body {
   }
 
   body {
-    padding: 0;
+    padding-top: 0;
   }
   .fixed-top {
     position: relative;
   }
 
-  .navbar {
-    margin-right: -1rem;
-
+  #mainfooter {
+      display: flex;
+      justify-content: center;
+      text-align:center;
+      justify-content: center;
   }
 
+  .btn-block {
+      display: inline-block;
+    
+   
+  }
 }
