@@ -12,6 +12,36 @@
 
 <body>
 
+<!-- Modal -->
+    <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginTitulo" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalLabel">Entre na sua Conta</h4>            
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>            
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="loginEmail">Email</label>
+                <input type="email" class="form-control" id="eloginEmail">
+              </div>
+              <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" class="form-control" id="senha">
+              </div>
+              <button type="submit" class="btn btn-primary">Entrar na sua conta</button>
+              <small class="form-text text-muted">Esqueceu a senha <a href="#">clique aqui</a>.</small>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- FechaModal -->
+
   <nav class="navbar navbar-expand-md navbar-light fixed-top py-1 box-shadow">
     <a href="/index.html" class="navbar-brand">
       <img src="/img/dreamtrip.png" alt="dreamTrip">
@@ -38,7 +68,7 @@
           <a class="nav-link" href="/contatos.html">Contatos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Login</a>
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#modalLogin">Login</a>
         </li>
         <li class="nav-item">
           <a class="btn btn-outline-primary ml-md-2" href="/inscricao.html">Inscreva-se</a>
