@@ -11,13 +11,7 @@
   crossorigin=""/>  
   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
   crossorigin=""></script>
-  <style>
-      #mapDIV{
-          height: 200px;
-          width:600px;
-          border: solid 1px black;
-      }
-</style>
+  
   <title>dreamTrip</title>
 </head>
 
@@ -115,26 +109,35 @@
         </form>
       </div>
 
-      <div class="col-lg">
+      <div class="col-lg ">
         <h2 class='h6'>Nosso Endereço</h2>
-        <div id='mapDIV'>i</div>
+        <div id='mapDIV'></div>
 
-        <h2 class='h6 mt-3'>DADOS DE CONTATO</h2>
-        <ul class="list-unstyled text-secondary">
-          <li>felipeblobo@gmail.com</li>
-          <li>(75) 99166-3952></li>
-          <li>De segunda à sexta. Das 8 às 18h</li>
-        </ul>
+        <div class='container mt-5'>
+          <div class='row'>
+            <div class="col-md">
+              <h2 class='h6 mb-3'>DADOS DE CONTATO</h2>
+              <ul class="list-unstyled text-secondary">
+                <li>felipeblobo@gmail.com</li>
+                <li>(75) 99166-3952></li>
+                <li>De segunda à sexta. Das 8 às 18h</li>
+              </ul>
+           </div>
+           <div class="col-md">
+             <h2 class='h6 mb-3'>REDES SOCIAIS</h2>
+             <ul class="list-unstyled">
+               <li><a class='btn btn-outline-secondary btn-block my-1 btn-sm' style="max-width: 200px" href="#">Facebook</a>
+               </li>
+               <li><a class='btn btn-outline-secondary btn-block btn-sm my-1' style="max-width: 200px" href="#">Instagram</a>
+               </li>
+               <li><a class='btn btn-outline-secondary my-1  btn-sm btn-block' style="max-width: 200px" href="#">Youtube</a>
+               </li>
+             </ul>
+            </div>
 
-        <h2 class='h6'>REDES SOCIAIS</h2>
-        <ul class="list-unstyled">
-          <li><a class='btn btn-outline-secondary btn-block my-1 btn-sm' style="max-width: 200px" href="#">Facebook</a>
-          </li>
-          <li><a class='btn btn-outline-secondary btn-block btn-sm my-1' style="max-width: 200px" href="#">Instagram</a>
-          </li>
-          <li><a class='btn btn-outline-secondary my-1  btn-sm btn-block' style="max-width: 200px" href="#">Youtube</a>
-          </li>
-        </ul>
+        </div>
+       
+      </div>
 
 
 
@@ -258,14 +261,18 @@
 
   <script>
     var map = L.map(document.getElementById('mapDIV'), {
-    center: [-13.0078368, -38.4903326,18],
+    center: [-13.0088368, -38.4903326,18],
     zoom: 16
     });
     var basemap = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
         });
         basemap.addTo(map);
-    var dreamTrip = L.marker([-13.008276, -38.4897099], 
-    {title: 'dreamTrip'});
+
+    var myIcon = L.icon({
+    iconUrl: 'https://api.geoapify.com/v1/icon/?type=awesome&color=%231af408&size=large&iconType=material&textSize=small&apiKey=c96999ce18944776a353f8342cdebbb6'});
+
+
+    var dreamTrip = L.marker([-13.008276, -38.4897099], {icon: myIcon, title: 'dreamTrip'});
     dreamTrip.bindPopup("dreamTrip");
     dreamTrip.addTo(map);
     
@@ -280,6 +287,7 @@
     integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
     crossorigin="anonymous"></script>
   <script type="text/javascript" src="app.js"></script>
+  <script src="../lib/leaflet/leaflet-src.js"></script>
 </body>
 
 </html>
