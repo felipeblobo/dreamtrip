@@ -23,6 +23,18 @@ body {
     margin-top: 10px;
 }
 
+.thead {
+    background-color: #f7f262;
+}
+
+.lista-plano li + li {
+  border-top: 1px solid rgba(0,0,0, .1);
+}
+
+.lista-plano li {
+  border-bottom: 1px solid rgba(0,0,0, .1);
+  padding: 1rem;
+}
 @media (max-width: 767px) {
   #home-quote .display-4 {
     font-size: 2rem;
