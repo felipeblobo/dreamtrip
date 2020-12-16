@@ -7,7 +7,8 @@ body {
     margin-right:0;
 }
 .navbar {
-  background-color: #fcf155;
+  /* background-color: #c7e4e5; */
+  background-image: linear-gradient(to right, #99caff , #e2dedc);
 }
 
 .box-shadow {
